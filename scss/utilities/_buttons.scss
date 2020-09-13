@@ -32,6 +32,7 @@
         @media screen and(max-height: 340px) {
             margin-bottom: 10vh;
         }
+
         @media screen and(max-height: 440px) {
             margin-bottom: 15vh;
         }
@@ -45,29 +46,10 @@
         }
     }
 }
+
 .btn {
     @include button;
     padding: 15px 10px;
     margin: 10px 0 0 0;
-    
+
 }
-
-.blog {
-    &__btn{
-        padding: 10px 10px;
-        background-color: $color-primario;
-        color: #fff;
-        transition-duration: 0.1s;
-        margin: 10px 0;
-        
-        
-        &:hover {
-            background-color: $color-logo;
-            color: $color-primario;
-            transform: scale(1.20);
-        }
-    }
-}
-
-
-
