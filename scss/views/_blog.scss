@@ -1,0 +1,145 @@
+.blog {
+    padding: 0 15px;
+    width: 100%;
+
+    &__contenedor {
+        @include flex-col-center();
+        width: 100%;
+    }
+
+    &__art {
+
+        padding: 0 0 30px 0;
+        @include flex-col-center();
+    }
+
+    &__imagen {
+        max-width: 350px;
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3rem;
+        }
+    }
+
+    &__cont {
+        @include flex-col-center();
+        padding: 0 5px;
+        max-width: 325px;
+
+        &--titulo {
+            @include titulos-h4();
+            color: $color-cuarto;
+            font-size: 1.75rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+
+    &__txt {
+        text-align: justify;
+
+        &--none {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: $bp_landscape-phones) {
+    .blog {
+        &__imagen {
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        &__cont {
+            max-width: 500px;
+            padding: 0 50px;
+            @include flex-col-center;
+        }
+
+    }
+}
+
+@media screen and (min-width: $bp_tablets) {
+    .blog {
+        &__art {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+
+            &--izq {
+                display: flex;
+                flex-flow: row-reverse wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &__cont {
+            align-self: flex-start;
+
+            &--titulo {
+                margin: 20px 0;
+
+            }
+        }
+
+        &__imagen {
+            align-self: center;
+
+            &__img {
+                padding: 10px;
+
+                &--der {
+                    &:hover {
+                        transform: rotate(-10deg);
+                    }
+                }
+
+                &--izq:hover {
+                    transform: rotate(10deg);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $bp_desktops) {
+    .blog {
+
+        &__cont {
+            align-self: center;
+
+            &--titulo {
+                margin: 0 0 20px 0;
+            }
+
+            &--der {
+                padding: 0 0 0 50px;
+                margin-left: 25px;
+            }
+
+            &--izq {
+                margin-right: 25px;
+            }
+        }
+
+        &__imagen {
+            max-width: 500px;
+
+            &__img {
+                &--der {
+                    margin-right: 25px;
+                }
+
+                &--izq {
+                    margin-left: 25px;
+                }
+
+            }
+        }
+
+    }
+}

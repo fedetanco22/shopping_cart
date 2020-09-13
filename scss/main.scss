@@ -1,0 +1,25 @@
+@import 'base/reset';
+@import 'base/typo';
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/whatsapp';
+@import 'utilities/buttons';
+
+
+@import 'layout/header';
+@import 'layout/general';
+@import 'layout/banner';
+@import 'layout/forms';
+@import 'layout/footer';
+@import 'layout/cards';
+@import 'layout/carousel';
+@import 'layout/modals';
+
+
+@import 'views/nosotros';
+@import 'views/index';
+@import 'views/productos';
+@import 'views/blog';
+
+

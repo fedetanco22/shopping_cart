@@ -1,0 +1,114 @@
+.banner {
+
+    background-image: url('../../images/1-BYN-inicio2.jpg');
+    @include bg-img();
+
+    &__cont {
+        height: 100vh;
+        @include flex-col-center();
+        justify-content: flex-end;
+    }
+
+    &__titulos {
+        text-align: center;
+        margin-bottom: 10vh;
+
+
+        &__h1 {
+            @include titulos-h1();
+
+            &--nos {
+                @include titulos-h1();
+                color: $color-blanco;
+                font-size: 3.5rem;
+                margin-bottom: 50px;
+            }
+        }
+
+        &__h3 {
+            @include titulos-h3();
+        }
+    }
+
+    &__banner-nos {
+        background-image: url('../../images/banner-nosotros.jpg');
+        @include bg-img()
+    }
+
+    &__banner-prod {
+        background-image: url('../../images/banner-Prod.jpg');
+        @include bg-img()
+    }
+
+    &__banner-blog {
+        background-image: url('../../images/banner-blog-indio.jpg');
+        @include bg-img()
+    }
+
+    &__banner-contacto {
+        background-image: url('../../images/banner-contacto.jpg');
+        @include bg-img()
+    }
+
+}
+
+
+@media screen and(min-width: $bp_sm-phones) {
+    .banner {
+        &__titulos {
+
+            &__h1 {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+/* Small devices y horiz entre 576px y 768px*/
+@media screen and(min-width: $bp_potrait-phones) {
+
+    .banner {
+        &__titulos {
+            &__h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: $bp_tablets) {
+    .banner {
+        &__titulos {
+            &__h1 {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    .titulos {
+        &__h1 {
+            font-size: 5rem;
+        }
+
+        &__h3 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media screen and(max-height: 340px) {
+    .banner {
+        &__titulos {
+            margin-bottom: 0;
+
+            &__h1 {
+                margin-bottom: 3vh;
+                font-size: 2.5rem;
+            }
+
+            &__h3 {
+                margin-bottom: 5vh;
+            }
+        }
+    }
+}
