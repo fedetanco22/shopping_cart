@@ -26,7 +26,6 @@ function Producto(nombre, precio, cantidad) {
 console.log(quagenda)
 console.log(quagendas) */
 
-
 var carrito = [];
 
 // Function declaration
@@ -34,17 +33,17 @@ let agregarCarrito = (nombre, precio) => {
 
     if (carrito.lenght > 0) { // Recorremos el carrito con ciclo FOR
         for (let i = 0; i < carrito.length; i++) {
-            if (carrito[i].nombre == nombre) {
+            if (carrito[i].nombre == nombre) { // VER como se ve dentro d elos objetos en un ARRAY!!
                 carrito[i].cantidad += 1
             } else {
                 agregarProducto = new Producto(nombre, precio, 1);
+                console.log(agregarProducto)
             }
-
         }
-        agregarProducto = new Producto(nombre, precio, 1);
-
-        carrito.push(agregarProducto)
     }
+    agregarProducto = new Producto(nombre, precio, 1);
+
+    carrito.push(agregarProducto)
 };
 
 agregarCarrito('Viajar', 1460) // Se puede llamar antes de definir la funcion
@@ -57,16 +56,6 @@ agregarCarrito('Beltran', 200)
 agregarCarrito('Beltran', 200)
 
 console.table(carrito)
-
-
-// Recorremos el carrit con ciclo FOR
-/* for (let i = 0; i < carrito.length; i++) {
-    console.log(`El prodcuto ${
-        carrito[i].nombre
-    } cuesta: ${
-        carrito[i].precio
-    }`)
-} */
 
 
 // Funcion Expression (No se usa mucho)
