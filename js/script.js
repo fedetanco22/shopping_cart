@@ -1,76 +1,62 @@
-// Object literal
-/* var quagendas = {
-    nombre: '',
-    precio: 1400,
-    cantidad: 0
-}
-var cuadernos = {
-    nombre: '',
-    precio: 1000,
-    cantidad: 0
-}
-var bitacoras = {
-    nombre: '',
-    precio: 1000,
-    cantidad: 0
-} */
+// ------------- Crear const con mis productos ---------------------
+// const viajar = ;
+// const luna = ;
+// const sol = ;
+// const sol1 = ;
+// const sol2 = ;
 
-// Object contructor
+// ------------- Crear los elementos  que cuando -------------------
+// ------------- hacemos click en agregar al carrito ---------------
+// ------------- le de parametros a la funcion ---------------------
+// ------------- agregarCarrito(nombre, precio)---------------------
+
+// ------------- Alerta cuando agregamos al carrito ---------------------
+function alerta() {
+    alert('Producto agregado al carrito de compras') // Solo de manera ilustrativa el alert
+}
+
+// ------------- Creamos Objetos con productos ---------------------
 function Producto(nombre, precio, cantidad) {
     this.nombre = nombre
     this.precio = precio
     this.cantidad = cantidad
 }
 
-/* quagenda = new Producto('Viajar', 1400, 1);
-console.log(quagenda)
-console.log(quagendas) */
-
+// ------------- Array Carrito vacio para agregar productos ---------------------
 var carrito = [];
 
-// Function declaration
-let agregarCarrito = (nombre, precio) => {
 
-    if (carrito.lenght > 0) { // Recorremos el carrito con ciclo FOR
-        for (let i = 0; i < carrito.length; i++) {
-            if (carrito[i].nombre == nombre) { // VER como se ve dentro d elos objetos en un ARRAY!!
-                carrito[i].cantidad += 1
-            } else {
-                agregarProducto = new Producto(nombre, precio, 1);
-                console.log(agregarProducto)
-            }
-        }
+// ------------- Function declaration ------------------------------
+
+// let agregarCarrito = (nombre, precio) => Arrow Function no se si funciona
+function agregarCarrito(nombre, precio) {
+
+    var encontrarProd = carrito.find(producto => producto.nombre == nombre)
+
+    if (encontrarProd) {
+        encontrarProd.cantidad ++;
+        // function con alerta de confirmacion
+
+    } else {
+        agregarProducto = new Producto(nombre, precio, 1);
+        carrito.push(agregarProducto)
+
     }
-    agregarProducto = new Producto(nombre, precio, 1);
-
-    carrito.push(agregarProducto)
 };
 
-agregarCarrito('Viajar', 1460) // Se puede llamar antes de definir la funcion
-agregarCarrito('Luna', 170)
-agregarCarrito('Sol', 146)
-agregarCarrito('Cuad', 60)
-agregarCarrito('Fede', 460)
-agregarCarrito('Cami', 10)
-agregarCarrito('Beltran', 200)
-agregarCarrito('Beltran', 200)
+agregarCarrito('Viajar es la respuesta', 1460) // Se puede llamar antes de definir la funcion
+agregarCarrito('Apunta a la luna', 1300)
+agregarCarrito('Apunta a la luna', 1300)
+agregarCarrito('Mejor hecho', 1250)
+agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200)
+
 
 console.table(carrito)
-
-
-// Funcion Expression (No se usa mucho)
-/* var miFunction = function agregarCarrito(nom, precio, cant) {
-
-    const agregarProducto = {
-        nombre: nom,
-        precio: precio,
-        cantidad: cant
-    }
-
-    carrito.push(agregarProducto)
-
-};
-
-// se llama despues de definirla
-console.log(miFunction) ????
- */
+// console.log(carrito[3].precio)
+// var tipo = typeof(carrito)
+// console.log(tipo)

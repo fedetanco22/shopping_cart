@@ -117,10 +117,16 @@
 										</div>
 									</div>
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal" tabindex="-1"
@@ -164,8 +170,8 @@
 
 													</div>
 												</div>
-												<div class="modal-footer">
-													<div class="modal-footer__caract">
+												<div class="modal-footer flex-column flex-sm-row ">
+													<div class="modal-footer__caract  ">
 														<div class="modal-footer__caract__titulo">
 															<strong>CARACTER&Iacute;STICAS</strong>
 														</div>
@@ -184,6 +190,11 @@
 																grs</li>
 														</ul>
 													</div>
+													<button type="button" onclick="alerta()" class="btn btn__modal"
+														data-toggle="modal" data-target="#cart">
+														<i class="fas fa-shopping-cart"></i>
+														<h4 class="agregar">Comprar</h4>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -203,10 +214,17 @@
 										</div>
 									</div>
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal-luna">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal-luna">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal-luna" tabindex="-1"
@@ -301,10 +319,17 @@
 									</div>
 
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal3">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal3">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal3" tabindex="-1"
@@ -387,10 +412,17 @@
 										</div>
 									</div>
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal-4">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal-4">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
+
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal-4" tabindex="-1"
@@ -485,10 +517,16 @@
 									</div>
 
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal-5">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal-5">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal-5" tabindex="-1"
@@ -572,10 +610,16 @@
 										</div>
 									</div>
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn__modal" data-toggle="modal"
-										data-target="#exampleModal-6">
-										Hac&eacute; click!
-									</button>
+									<div class="flex-row justify-content-between">
+										<button type="button" class="btn btn__modal" data-toggle="modal"
+											data-target="#exampleModal-6">
+											Hac&eacute; click!
+										</button>
+										<button type="button" onclick="alerta()" class="btn btn__modal"
+											data-toggle="modal" data-target="#cart">
+											<i class="fas fa-shopping-cart"></i>
+										</button>
+									</div>
 
 									<!-- Modal -->
 									<div class="modal fade" id="exampleModal-6" tabindex="-1"
@@ -654,8 +698,12 @@
 				class="fab fa-whatsapp text-white"></i></a>
 		<!-- fin boton whatsapp -->
 		<!-- inicio boton Carrito -->
-		<a class="carrito-button" target="blank" href="#carrito"><i class="fas fa-shopping-cart"></i></a>
+		<div class="carrito">
+			<a class="carrito-button" target="blank" href="#carrito"><i class="fas fa-shopping-cart"></i></a>
+			<div class="carrito-items">0</div>
+		</div>
 		<!-- fin boton Carrito -->
+
 		<footer class="footer">
 
 			<div class="form footer__form">
