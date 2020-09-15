@@ -1,7 +1,7 @@
 .banner {
 
     &__banner-prod {
-        background-image: url('../../images/banner-Prod.jpg');
+        background-image: url('../images/banner-Prod.jpg');
         @include bg-img()
     }
 

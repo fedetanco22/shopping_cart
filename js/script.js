@@ -10,10 +10,6 @@
 // ------------- le de parametros a la funcion ---------------------
 // ------------- agregarCarrito(nombre, precio)---------------------
 
-// ------------- Alerta cuando agregamos al carrito ---------------------
-function alerta() {
-    alert('Producto agregado al carrito de compras') // Solo de manera ilustrativa el alert
-}
 
 // ------------- Creamos Objetos con productos ---------------------
 function Producto(nombre, precio, cantidad) {
@@ -23,28 +19,32 @@ function Producto(nombre, precio, cantidad) {
 }
 
 // ------------- Array Carrito vacio para agregar productos ---------------------
-var carrito = [];
 
+var carrito = [];
 
 // ------------- Function declaration ------------------------------
 
 // let agregarCarrito = (nombre, precio) => Arrow Function no se si funciona
-function agregarCarrito(nombre, precio) {
+function agregarCarrito(nombre, precio) { // ------------- Alerta cuando agregamos al carrito ---------------------
+
+
+    alert('Producto agregado al carrito de compras') // Solo de manera ilustrativa el alert
 
     var encontrarProd = carrito.find(producto => producto.nombre == nombre)
 
     if (encontrarProd) {
         encontrarProd.cantidad ++;
-        // function con alerta de confirmacion
 
     } else {
         agregarProducto = new Producto(nombre, precio, 1);
         carrito.push(agregarProducto)
 
     }
+
+
 };
 
-agregarCarrito('Viajar es la respuesta', 1460) // Se puede llamar antes de definir la funcion
+/* agregarCarrito('Viajar es la respuesta', 1460) // Se puede llamar antes de definir la funcion
 agregarCarrito('Apunta a la luna', 1300)
 agregarCarrito('Apunta a la luna', 1300)
 agregarCarrito('Mejor hecho', 1250)
@@ -53,10 +53,8 @@ agregarCarrito('Disena la vida', 1200)
 agregarCarrito('Disena la vida', 1200)
 agregarCarrito('Disena la vida', 1200)
 agregarCarrito('Disena la vida', 1200)
-agregarCarrito('Disena la vida', 1200)
+agregarCarrito('Disena la vida', 1200) */
 
 
-console.table(carrito)
-// console.log(carrito[3].precio)
-// var tipo = typeof(carrito)
-// console.log(tipo)
+/* console.table(carrito)
+console.table(carrito[3]) */
