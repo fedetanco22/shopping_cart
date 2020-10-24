@@ -12,10 +12,11 @@
 
 
 // ------------- Creamos Objetos con productos ---------------------
-function Producto(nombre, precio, cantidad) {
+function Producto(nombre, precio, cantidad, autor) {
     this.nombre = nombre
     this.precio = precio
     this.cantidad = cantidad
+    this.autor = autor
 }
 
 // ------------- Array Carrito vacio para agregar productos ---------------------
@@ -25,7 +26,7 @@ var carrito = [];
 // ------------- Function declaration ------------------------------
 
 // let agregarCarrito = (nombre, precio) => Arrow Function no se si funciona
-function agregarCarrito(nombre, precio) { // ------------- Alerta cuando agregamos al carrito ---------------------
+function agregarCarrito(nombre, precio, autor) { // ------------- Alerta cuando agregamos al carrito ---------------------
 
 
     alert('Producto agregado al carrito de compras') // Solo de manera ilustrativa el alert
@@ -36,7 +37,7 @@ function agregarCarrito(nombre, precio) { // ------------- Alerta cuando agregam
         encontrarProd.cantidad ++;
 
     } else {
-        agregarProducto = new Producto(nombre, precio, 1);
+        agregarProducto = new Producto(nombre, precio, autor, 1);
         carrito.push(agregarProducto)
 
     }
@@ -58,3 +59,23 @@ agregarCarrito('Disena la vida', 1200) */
 
 /* console.table(carrito)
 console.table(carrito[3]) */
+
+
+let productos = {
+    cuadernos: {
+        autor: 'Kiki Viale',
+        nombres: 'apunta a la luna',
+        precio: 44,
+        cantidad: 0
+    },
+    bitacoras: {
+        nombres: 'apunta a la luna',
+        precio: 44,
+        cantidad: 0
+    },
+    quagendas: {
+        nombres: 'apunta a la luna',
+        precio: 44,
+        cantidad: 0
+    }
+}
